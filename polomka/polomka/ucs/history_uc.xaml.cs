@@ -1,4 +1,5 @@
-﻿using System;
+﻿using polomka.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,25 +13,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using polomka.pages;
 
-namespace polomka
+namespace polomka.ucs
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для history_uc.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class history_uc : UserControl
     {
-        public MainWindow()
+        public history_uc(ClientService history)
         {
             InitializeComponent();
-        }
-
-
-
-        private void history_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new history_page());
+            var c = App.db.Client.FirstOrDefault(x => x.ID == history.ClientID);
+            client_name_tb.Text = c.FirstName;
         }
     }
 }

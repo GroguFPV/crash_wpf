@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="polomka.ucs.history_uc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:polomka.ucs"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="800">
+    <!--<Grid Background="LightYellow">-->
+
+    <Grid Background="LightYellow" Width="800" Height="195"
+               Margin="0,2.5,0,2.5">
+        <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" 
+                     HorizontalAlignment="Center">
+            <StackPanel Width="300" Orientation="Vertical">
+                <TextBlock FontSize="20" 
+                       FontFamily="Tw Cen MT">Клиент</TextBlock>
+                <TextBlock FontSize="20" x:Name="client_firstname_tb"
+                       FontFamily="Tw Cen MT">Клиент_фамилия</TextBlock>
+                <TextBlock FontSize="20" x:Name="client_name_tb"
+                       FontFamily="Tw Cen MT">Клиент_имя</TextBlock>
+                <TextBlock FontSize="20" x:Name="client_patronymic_tb"
+                       FontFamily="Tw Cen MT">Клиент_отчество</TextBlock>
+            </StackPanel>
+            <StackPanel Width="300" Orientation="Vertical">
+                <TextBlock FontSize="20" 
+                       FontFamily="Tw Cen MT">Услуга</TextBlock>
+                <TextBlock Height="70" TextWrapping="Wrap" TextTrimming="WordEllipsis" FontSize="20" x:Name="service_name_tb"
+                       FontFamily="Tw Cen MT">Замена сальника привода </TextBlock>
+                
+            </StackPanel>
+            <StackPanel Width="100" Orientation="Vertical">
+                <TextBlock FontSize="20" 
+                       FontFamily="Tw Cen MT">Дата</TextBlock>
+                <TextBlock FontSize="20" x:Name="service_date_tb"
+                       FontFamily="Tw Cen MT">Дата</TextBlock>
+                <TextBlock FontSize="20" x:Name="service_time_tb"
+                       FontFamily="Tw Cen MT">время</TextBlock>
+
+
+            </StackPanel>
+        </StackPanel>
+        </Grid>
+   
+</UserControl>

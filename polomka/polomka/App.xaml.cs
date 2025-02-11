@@ -1,4 +1,5 @@
-﻿using System;
+﻿using polomka.db;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,6 @@ namespace polomka
     /// </summary>
     public partial class App : Application
     {
+        public static up_4_2Entities db = new up_4_2Entities();
     }
 }

@@ -12,25 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using polomka.pages;
 
-namespace polomka
+namespace polomka.pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для clients_list_page.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class clients_list_page : Page
     {
-        public MainWindow()
+        public clients_list_page()
         {
             InitializeComponent();
-        }
-
-
-
-        private void history_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new history_page());
         }
     }
 }

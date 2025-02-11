@@ -1,0 +1,30 @@
+﻿<Page x:Class="polomka.pages.history_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:polomka.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="850"
+      Title="history_page">
+
+    <Grid Background="White">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal">
+                <!--поиск вся фигня-->
+            </StackPanel>
+
+            <ScrollViewer Height="400" Width="800" VerticalScrollBarVisibility="Visible">
+                <WrapPanel  
+                           x:Name="history_wp"></WrapPanel>
+            </ScrollViewer>
+
+            <StackPanel Orientation="Horizontal">
+                <!--кнопочки-->
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Page>
