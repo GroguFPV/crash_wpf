@@ -1,4 +1,6 @@
-﻿using System;
+﻿using polomka.db;
+using polomka.ucs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,17 @@ namespace polomka.pages
         public clients_list_page()
         {
             InitializeComponent();
+            Refresh();
         }
+        public void Refresh()
+        {
+            IEnumerable<Client> clients = App.db.Client.ToList();
+            client_wp.Children.Clear();
+            foreach (Client c in clients)
+            {
+                client_wp.Children.Add(new client_uc(c));
+            }
+        }
+
     }
 }

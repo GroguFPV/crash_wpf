@@ -9,6 +9,27 @@
       Title="clients_list_page">
 
     <Grid Background="White">
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Orientation="Vertical" Margin="0,5,0,0">
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20">🔎</TextBlock>
+                <TextBox FontSize="20" Background="LightYellow"
+                         x:Name="search_tb" Width="300" Height="30"
+                         Margin="5,0,0,0"/>
+
+
+            </StackPanel>
+
+            <ScrollViewer  Height="400" Width="800" VerticalScrollBarVisibility="Visible">
+                <WrapPanel  
+                           x:Name="client_wp"></WrapPanel>
+            </ScrollViewer>
+
+            <StackPanel Orientation="Horizontal">
+                <!--кнопочки-->
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Page>

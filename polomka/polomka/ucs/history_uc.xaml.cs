@@ -25,7 +25,15 @@ namespace polomka.ucs
         {
             InitializeComponent();
             var c = App.db.Client.FirstOrDefault(x => x.ID == history.ClientID);
-            client_name_tb.Text = c.FirstName;
+            client_name_tb.Text = c.LastName;
+            client_firstname_tb.Text = c.FirstName;
+            client_patronymic_tb.Text = c.Patronymic;
+            var s = App.db.Service.FirstOrDefault(x => x.ID == history.ServiceID);
+            service_name_tb.Text = s.Title;
+
+            service_date_tb.Text = $"Дата: {history.StartTime.ToShortDateString()}";
+            service_time_tb.Text = $"Время: {history.StartTime.ToShortTimeString()}";
+
         }
     }
 }

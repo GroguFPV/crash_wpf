@@ -115,6 +115,9 @@
     <Compile Include="db\Tag.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ucs\client_uc.xaml.cs">
+      <DependentUpon>client_uc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ucs\history_uc.xaml.cs">
       <DependentUpon>history_uc.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pages\history_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ucs\client_uc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

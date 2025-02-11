@@ -32,5 +32,10 @@ namespace polomka
         {
             MainFrame.Navigate(new history_page());
         }
+
+        private void client_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new clients_list_page());
+        }
     }
 }

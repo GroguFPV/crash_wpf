@@ -5,41 +5,46 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:polomka.ucs"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="800">
+             d:DesignHeight="100" d:DesignWidth="780">
     <!--<Grid Background="LightYellow">-->
 
-    <Grid Background="LightYellow" Width="800" Height="195"
-               Margin="0,2.5,0,2.5">
-        <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" 
-                     HorizontalAlignment="Center">
-            <StackPanel Width="300" Orientation="Vertical">
+    <Grid Background="LightYellow" Width="780" Height="90"
+               Margin="0,5,0,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0"  Orientation="Vertical"
+                     HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" >
+            <StackPanel  Orientation="Horizontal">
                 <TextBlock FontSize="20" 
-                       FontFamily="Tw Cen MT">Клиент</TextBlock>
+                       FontFamily="Tw Cen MT">Клиент:</TextBlock>
                 <TextBlock FontSize="20" x:Name="client_firstname_tb"
-                       FontFamily="Tw Cen MT">Клиент_фамилия</TextBlock>
+                       FontFamily="Tw Cen MT" Margin="10,0,0,0">Клиент_фамилия</TextBlock>
                 <TextBlock FontSize="20" x:Name="client_name_tb"
-                       FontFamily="Tw Cen MT">Клиент_имя</TextBlock>
+                       FontFamily="Tw Cen MT" Margin="10,0,0,0">Клиент_имя</TextBlock>
                 <TextBlock FontSize="20" x:Name="client_patronymic_tb"
-                       FontFamily="Tw Cen MT">Клиент_отчество</TextBlock>
+                       FontFamily="Tw Cen MT" Margin="10,0,0,0">Клиент_отчество</TextBlock>
             </StackPanel>
-            <StackPanel Width="300" Orientation="Vertical">
+            <StackPanel  Orientation="Horizontal" Margin="0,10,0,0">
                 <TextBlock FontSize="20" 
-                       FontFamily="Tw Cen MT">Услуга</TextBlock>
-                <TextBlock Height="70" TextWrapping="Wrap" TextTrimming="WordEllipsis" FontSize="20" x:Name="service_name_tb"
-                       FontFamily="Tw Cen MT">Замена сальника привода </TextBlock>
-                
+                       FontFamily="Tw Cen MT">Услуга:</TextBlock>
+                <TextBlock   FontSize="20" x:Name="service_name_tb"
+                       FontFamily="Tw Cen MT" Margin="10,0,0,0">Замена сальника привода</TextBlock>
+
             </StackPanel>
-            <StackPanel Width="100" Orientation="Vertical">
-                <TextBlock FontSize="20" 
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" 
+                    Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+
+            <TextBlock FontSize="20" x:Name="service_date_tb"
                        FontFamily="Tw Cen MT">Дата</TextBlock>
-                <TextBlock FontSize="20" x:Name="service_date_tb"
-                       FontFamily="Tw Cen MT">Дата</TextBlock>
-                <TextBlock FontSize="20" x:Name="service_time_tb"
+            <TextBlock FontSize="20" x:Name="service_time_tb"
                        FontFamily="Tw Cen MT">время</TextBlock>
 
 
-            </StackPanel>
         </StackPanel>
-        </Grid>
+    </Grid>
    
 </UserControl>
