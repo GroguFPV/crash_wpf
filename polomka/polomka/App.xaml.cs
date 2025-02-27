@@ -15,5 +15,6 @@ namespace polomka
     public partial class App : Application
     {
         public static up_4_2Entities db = new up_4_2Entities();
+        public static MainWindow frame;
     }
 }

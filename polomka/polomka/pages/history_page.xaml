@@ -13,11 +13,18 @@
                     Orientation="Vertical" Margin="0,5,0,0">
 
             <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="20">🔎</TextBlock>
-                <TextBox FontSize="20" Background="LightYellow"
+                <TextBlock FontFamily="Tw Cen MT" FontSize="20">🔎</TextBlock>
+                <TextBox FontFamily="Tw Cen MT" FontSize="20" Background="LightYellow"
                          x:Name="search_tb" Width="300" Height="30"
-                         Margin="5,0,0,0"/>
-                
+                         Margin="5,0,0,0" TextChanged="search_tb_TextChanged"/>
+                <TextBlock  FontFamily="Tw Cen MT" FontSize="20" Margin="5,5,5,0">Дата записи</TextBlock>
+
+                <ComboBox x:Name="ServiceCb" FontSize="18" SelectionChanged="ServiceCb_SelectionChanged"
+                          >
+                    <ComboBoxItem FontFamily="Tw Cen MT" Content="Все записи" IsSelected="True"/>
+                    <ComboBoxItem FontFamily="Tw Cen MT" Content="Сначала новые"/>
+                    <ComboBoxItem FontFamily="Tw Cen MT" Content="Сначала старые"/>
+                </ComboBox>
                 
             </StackPanel>
 
@@ -27,7 +34,8 @@
             </ScrollViewer>
 
             <StackPanel Orientation="Horizontal">
-                <!--кнопочки-->
+                <Button FontFamily="Tw Cen MT" Background="#FFFF9C1A" Width="120" FontSize="20"
+                        x:Name="AddNeH" Click="AddNeH_Click">Добавить</Button>
             </StackPanel>
             
         </StackPanel>

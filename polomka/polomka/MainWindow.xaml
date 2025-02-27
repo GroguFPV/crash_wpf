@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:polomka"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="1000">
+        ResizeMode="NoResize"
+        Title="Поломка"
+        Icon="/images/service_logo.ico"
+         Height="525" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>

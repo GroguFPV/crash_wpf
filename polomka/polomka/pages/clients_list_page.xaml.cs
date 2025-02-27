@@ -25,11 +25,36 @@ namespace polomka.pages
         public clients_list_page()
         {
             InitializeComponent();
+
+            RegDate.SelectedIndex = 0;
+
             Refresh();
+        
         }
         public void Refresh()
         {
-            IEnumerable<Client> clients = App.db.Client.ToList();
+            if (client_wp == null) return;
+            string searchText = search_tb.Text.ToLower().Trim();
+
+
+            IEnumerable<Client> clients = App.db.Client.OrderBy(c => c.FirstName);
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                clients = clients.Where(c =>
+                    c.LastName.ToLower().Contains(searchText) ||
+                    c.FirstName.ToLower().Contains(searchText) ||
+                    (c.Patronymic != null && c.Patronymic.ToLower().Contains(searchText))
+                );
+            }
+            if (RegDate.SelectedIndex == 1)
+            {
+                clients = clients.OrderByDescending(c => c.RegistrationDate);
+            }
+            else if (RegDate.SelectedIndex == 2)
+            {
+                clients = clients.OrderBy(c => c.RegistrationDate);
+            }
+
             client_wp.Children.Clear();
             foreach (Client c in clients)
             {
@@ -37,5 +62,22 @@ namespace polomka.pages
             }
         }
 
+
+
+
+        private void new_c_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new add_edit_client_page(new Client()));
+        }
+
+        private void search_tb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Refresh();
+        }
+
+        private void RegDate_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Refresh();
+        }
     }
 }

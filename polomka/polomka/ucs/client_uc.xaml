@@ -33,8 +33,24 @@
                 
             </StackPanel>
         </StackPanel>
-        <Button FontSize="20" Width="40" Height="40" 
-                Grid.Column="1" x:Name="inf0_btn" Background="#FFFF9C1A" FontWeight="Bold">ℹ️</Button>
+        <StackPanel Grid.Column="1"  Orientation="Vertical" VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Button FontSize="25" Width="55" Height="40" 
+                x:Name="edit_btn" BorderThickness="0"
+                Background="#FFFF9C1A" FontWeight="Bold" Click="edit_btn_Click">✏️</Button>
+
+                <Button FontSize="25" Width="55" Height="40" 
+                x:Name="del_btn" BorderThickness="0"
+                Background="#FFFF9C1A" FontWeight="Bold" 
+                    Margin="10,0,0,0" Click="del_btn_Click">🗑</Button>
+            </StackPanel>
+            <Button FontSize="20" Width="120" Height="30" 
+                x:Name="info_btn" BorderThickness="0"
+                Background="#FFFF9C1A"  
+                    Margin="0,5,0,0" Click="info_btn_Click">Подробнее</Button>
+        </StackPanel>
+        
             
     </Grid>
 </UserControl>

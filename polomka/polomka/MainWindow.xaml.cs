@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,18 @@ namespace polomka
         public MainWindow()
         {
             InitializeComponent();
+            App.frame = this;
+            MainFrame.Navigate(new history_page());
+
+            //var path = @"C:\Users\Ahat\Desktop\Поломка\данные\Клиенты\";
+            //foreach (var item in App.db.Client.ToArray())
+            //{
+            //    var fullPath = path + item.PhotoPath;
+            //    item.image_bin = File.ReadAllBytes(fullPath);
+            //}
+            //App.db.SaveChanges();
+
+
         }
 
 
